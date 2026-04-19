@@ -108,8 +108,20 @@ Tabs(value="print" class="app-tabs")
             .list-footer
               Button(
                 label="Add" icon="pi pi-plus" size="small"
-                class="add-btn"
+                class="list-btn"
                 @click="newTemplate"
+              )
+              Button(
+                label="Delete" icon="pi pi-trash" size="small" severity="danger"
+                class="list-btn"
+                :disabled="!selectedNameRef"
+                @click="confirmDelete"
+              )
+              Button(
+                icon="pi pi-refresh" size="small" severity="secondary" text rounded
+                v-tooltip.top="'Rescan directory'"
+                :loading="scanningRef"
+                @click="rescanTemplates"
               )
 
         //- Right — editor
@@ -129,12 +141,6 @@ Tabs(value="print" class="app-tabs")
                   label="Save" icon="pi pi-save" size="small"
                   @click="saveTemplate" :loading="savingRef"
                   :disabled="!editNameRef.trim()"
-                )
-                Button(
-                  icon="pi pi-trash" size="small" severity="danger" text rounded
-                  v-tooltip.top="'Delete'"
-                  @click="confirmDelete"
-                  :disabled="!selectedNameRef"
                 )
                 Button(
                   label="Print" icon="pi pi-print" size="small" severity="secondary"
@@ -252,6 +258,7 @@ const confirm = useConfirm()
 const templateNamesRef = ref([])
 const selectedNameRef  = ref(null)
 const savingRef        = ref(false)
+const scanningRef      = ref(false)
 
 const editNameRef     = ref("")
 const editHeaderRef   = ref("")
@@ -270,6 +277,16 @@ const editDataRef     = ref(JSON.stringify({
 
 const fetchTemplates = async () => {
   templateNamesRef.value = await $fetch("/api/templates")
+}
+
+const rescanTemplates = async () => {
+  scanningRef.value = true
+  try {
+    await fetchTemplates()
+    toast.add({ severity: "info", summary: "Rescanned", life: 2000 })
+  } finally {
+    scanningRef.value = false
+  }
 }
 
 const onSelectTemplate = async (name) => {
@@ -515,11 +532,13 @@ button
   border-bottom: 1px solid var(--p-surface-border)
 
 .list-footer
+  display: flex
+  gap: 0.5rem
   padding: 0.5rem
   border-top: 1px solid var(--p-surface-border)
 
-.add-btn
-  width: 100%
+.list-btn
+  flex: 1
 
 .template-list
   flex: 1
