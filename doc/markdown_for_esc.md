@@ -185,6 +185,9 @@ Resolved before markdown parsing. Accepts Sugar.js natural language expressions 
 
 Format: `{date:EXPRESSION|FORMAT}`. The format is optional; default is `%B %e, %Y`.
 
+
+### strftime Tokens
+
 ---
 
 ## Blank lines
