@@ -1,8 +1,25 @@
 // nuxt.config.js
+import Aura from "@primevue/themes/aura"
+
 export default defineNuxtConfig({
+  modules: ["@primevue/nuxt-module"],
+
+  primevue: {
+    autoImport: true,
+    options: {
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: ".app-dark",
+        },
+      },
+    },
+  },
+
   runtimeConfig: {
-    printerIp: process.env.POS_POC_PRINTER_IP || "192.168.1.17",
-    printerPort: 9100,
+    printerIp:     process.env.POS_POC_PRINTER_IP     || "192.168.1.17",
+    printerPort:   9100,
+    templatesPath: process.env.POS_POC_TEMPLATES_PATH || "./data/templates",
   },
 
   nitro: {
