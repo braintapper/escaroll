@@ -12,5 +12,9 @@
   "dependencies": {
     "nuxt": "^3.16.0",
     "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "pug": "^3.0.4",
+    "sass": "^1.99.0"
   }
 }

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   nitro: {
     externals: {
-      inline: ["sharp"],
+      external: ["sharp"],
     },
   },
 })
