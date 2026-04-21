@@ -1,8 +1,13 @@
-# Escaroll
+# ESCaroll
 
-![Escaroll](/images/escaroll_transparent_bg.png)
+![ESCaroll](/images/escaroll_transparent_bg.png)
 
-Nuxt 3 ESC/POS print server for the **Rongta RP332** (80mm thermal, 203dpi, 576 dots wide). Connects to the printer via raw TCP on port 9100. Templates are YAML files on disk; a browser UI handles CRUD and test printing.
+Nuxt 3 ESC/POS print serverConnects to the printer via raw TCP on port 9100. Templates are YAML files on disk; a browser UI handles CRUD and test printing.
+
+Output format is a flavour of Markdown that makes it easy to layout content on a receipt roll. [Language Reference](/doc/markdown_for_esc.md)
+
+Tested with the **Rongta RP332** (80mm thermal, 203dpi, 576 dots wide).
+
 
 ---
 
