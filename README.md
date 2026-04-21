@@ -143,7 +143,14 @@ body: |
 - **`body`** — Handlebars template, rendered before markdown parsing
 - **`options.tableGap`** — column spacing (default `2`)
 
-See [doc/markdown_for_esc.md](doc/markdown_for_esc.md) for the full markdown dialect reference.
+### Further reading
+
+| Document | Description |
+|----------|-------------|
+| [Markdown language reference](doc/markdown_for_esc.md) | Full syntax reference for the Escaroll markdown dialect |
+| [Template specification](doc/document_template_spec.md) | YAML template format, render pipeline, and data object |
+| [Tables](doc/grid.md) | Table syntax, column widths, alignment, and gap options |
+| [Date tokens](doc/date-tokens.md) | Date/time token syntax and strftime format reference |
 
 ---
 
