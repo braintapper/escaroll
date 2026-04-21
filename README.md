@@ -8,6 +8,7 @@ Output format is a flavour of Markdown that makes it easy to layout content on a
 
 Tested with the **Rongta RP332** (80mm thermal, 203dpi, 576 dots wide).
 
+Supports images (with dithering) and text graphics via [Figlet](https://github.com/patorjk/figlet.js)
 
 ---
 
