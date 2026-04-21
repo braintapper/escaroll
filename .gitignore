@@ -140,3 +140,6 @@ vite.config.ts.timestamp-*
 
 
 data/*
+
+# Claude Code — local machine settings, not for sharing
+.claude/settings.local.json
