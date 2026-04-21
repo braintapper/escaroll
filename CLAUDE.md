@@ -1,5 +1,6 @@
 # CLAUDE.MD
 
+This project is called **Escaroll**.
 
 This project is based on Nuxt and Vue.
 

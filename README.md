@@ -1,4 +1,6 @@
-# POS-POC
+# Escaroll
+
+![Escaroll](/images/escaroll_transparent_bg.png)
 
 Nuxt 3 ESC/POS print server for the **Rongta RP332** (80mm thermal, 203dpi, 576 dots wide). Connects to the printer via raw TCP on port 9100. Templates are YAML files on disk; a browser UI handles CRUD and test printing.
 
