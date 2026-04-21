@@ -27,6 +27,8 @@ Supports images (with dithering) and text graphics via [Figlet](https://github.c
 
 ## Setup
 
+### Local development
+
 ```bash
 cp .env.example .env          # set POS_POC_PRINTER_IP
 npm install
@@ -34,6 +36,15 @@ npm run dev
 ```
 
 Open `http://localhost:3000` for the browser UI.
+
+### Docker
+
+```bash
+cp .env.example .env          # set POS_POC_PRINTER_IP
+docker compose up -d
+```
+
+See [doc/docker.md](doc/docker.md) for full deployment instructions including volumes, printer networking, and Unraid setup.
 
 ### Environment variables
 
@@ -151,6 +162,7 @@ body: |
 | [Template specification](doc/document_template_spec.md) | YAML template format, render pipeline, and data object |
 | [Tables](doc/grid.md) | Table syntax, column widths, alignment, and gap options |
 | [Date tokens](doc/date-tokens.md) | Date/time token syntax and strftime format reference |
+| [Docker deployment](doc/docker.md) | Container setup, volumes, printer networking, and Unraid |
 
 ---
 
