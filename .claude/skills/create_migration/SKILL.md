@@ -1,6 +1,6 @@
 ---
 name: create_migration
-description: Adds a database migration SQL file into the db/migrations folder. Usage: /add_migration <filename>
+description: "Adds a database migration SQL file into the db/migrations folder. Usage: /add_migration <filename>"
 model: sonnet
 ---
 

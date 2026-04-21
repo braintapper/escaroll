@@ -1,6 +1,6 @@
 ---
 name: vue_compliance
-description: Reorganizes Vue files to be consistent Usage: /vue_compliance
+description: "Reorganizes Vue files to be consistent Usage: /vue_compliance"
 model: sonnet
 ---
 

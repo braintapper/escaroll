@@ -28,4 +28,5 @@ Check only files with these extensions:
 In these folders:
 
 * /app
+* /pages
 * /server

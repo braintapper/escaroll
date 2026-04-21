@@ -1,6 +1,6 @@
 ---
 name: orphans
-description: Generates a list of orphaned components or files Usage: \/orphans
+description: "Generates a list of orphaned components or files. Usage: /orphans"
 model: sonnet
 ---
 
