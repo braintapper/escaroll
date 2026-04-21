@@ -17,9 +17,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    printerIp:     process.env.POS_POC_PRINTER_IP     || "192.168.1.17",
+    printerIp:     process.env.ESCAROLL_PRINTER_IP     || "192.168.1.17",
     printerPort:   9100,
-    templatesPath: process.env.POS_POC_TEMPLATES_PATH || "./data/templates",
+    templatesPath: process.env.ESCAROLL_TEMPLATES_PATH || "./data/templates",
   },
 
   nitro: {

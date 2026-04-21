@@ -5,8 +5,8 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - POS_POC_PRINTER_IP=${POS_POC_PRINTER_IP:-192.168.1.17}
-      - POS_POC_TEMPLATES_PATH=/data/templates
+      - ESCAROLL_PRINTER_IP=${ESCAROLL_PRINTER_IP:-192.168.1.17}
+      - ESCAROLL_TEMPLATES_PATH=/data/templates
     volumes:
       - ./data:/data
     restart: unless-stopped

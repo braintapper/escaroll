@@ -10,7 +10,7 @@
 ## Quick start
 
 ```bash
-cp .env.example .env   # set POS_POC_PRINTER_IP
+cp .env.example .env   # set ESCAROLL_PRINTER_IP
 docker compose up -d
 ```
 
@@ -24,8 +24,8 @@ Set these in your `.env` file or pass them directly to `docker compose`:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `POS_POC_PRINTER_IP` | `192.168.1.17` | LAN IP of the ESC/POS printer |
-| `POS_POC_TEMPLATES_PATH` | `/data/templates` | Path inside the container for YAML templates |
+| `ESCAROLL_PRINTER_IP` | `192.168.1.17` | LAN IP of the ESC/POS printer |
+| `ESCAROLL_TEMPLATES_PATH` | `/data/templates` | Path inside the container for YAML templates |
 
 ---
 
@@ -82,7 +82,7 @@ Add a new Docker container in the Unraid UI with the following settings:
 | Repository | `escaroll` (after building locally or pushing to a registry) |
 | Network type | Bridge |
 | Port mapping | Host `3000` → Container `3000` |
-| Variable `POS_POC_PRINTER_IP` | Your printer's IP |
+| Variable `ESCAROLL_PRINTER_IP` | Your printer's IP |
 | Path `/data` | An Unraid share path, e.g. `/mnt/user/appdata/escaroll/data` |
 
 Or use the provided `docker-compose.yml` via Unraid's Compose Manager plugin.

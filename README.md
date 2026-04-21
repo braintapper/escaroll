@@ -30,7 +30,7 @@ Supports images (with dithering) and text graphics via [Figlet](https://github.c
 ### Local development
 
 ```bash
-cp .env.example .env          # set POS_POC_PRINTER_IP
+cp .env.example .env          # set ESCAROLL_PRINTER_IP
 npm install
 npm run dev
 ```
@@ -40,7 +40,7 @@ Open `http://localhost:3000` for the browser UI.
 ### Docker
 
 ```bash
-cp .env.example .env          # set POS_POC_PRINTER_IP
+cp .env.example .env          # set ESCAROLL_PRINTER_IP
 docker compose up -d
 ```
 
@@ -50,8 +50,8 @@ See [doc/docker.md](doc/docker.md) for full deployment instructions including vo
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `POS_POC_PRINTER_IP` | `192.168.1.17` | Printer LAN IP |
-| `POS_POC_TEMPLATES_PATH` | `./data/templates` | Directory for YAML template files |
+| `ESCAROLL_PRINTER_IP` | `192.168.1.17` | Printer LAN IP |
+| `ESCAROLL_TEMPLATES_PATH` | `./data/templates` | Directory for YAML template files |
 
 ---
 
