@@ -46,6 +46,8 @@ docker compose up -d
 
 See [doc/docker.md](doc/docker.md) for full deployment instructions including volumes, printer networking, and Unraid setup.
 
+> **Security note:** Escaroll is a hobby project meant to run on a trusted LAN. It has **no authentication** — anyone who can reach the port can print and manage templates — and the template endpoints do minimal path validation. Don't expose it to the public internet. Fork and harden it if you need that.
+
 ### Environment variables
 
 | Variable | Default | Description |
