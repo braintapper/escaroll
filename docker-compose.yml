@@ -1,5 +1,6 @@
 services:
   escaroll:
+    image: unraid.slantyyz.com:5000/escaroll:latest
     build: .
     ports:
       - "3000:3000"
